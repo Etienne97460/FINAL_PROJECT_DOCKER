@@ -25,6 +25,7 @@ FINAL_PROJECT/
 └── README.md               # Documentation du projet (résumé, prérequis, installation, et fonctionnement)
 
 
+
 - Technologies Utilisées
 
 Backend : Python avec FastAPI
