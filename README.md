@@ -7,21 +7,37 @@ Ce projet a pour objectif de créer une application web composée de plusieurs m
  - Structure du Projet
 
 FINAL_PROJECT/
+
 ├── backend/                # Répertoire contenant le code source et la configuration du backend
+
 │   ├── app/                # Code source principal du backend (fichiers Python pour la logique de l'application)
+
 │   ├── Dockerfile          # Fichier de configuration Docker pour conteneuriser le backend
+
 │   ├── main.py             # Point d'entrée principal pour démarrer l'application backend avec FastAPI
+
 │   └── requirements.txt    # Liste des dépendances Python nécessaires pour le backend (ex : FastAPI, Uvicorn)
+
 ├── frontend/               # Répertoire contenant le code source et la configuration du frontend
+
 │   ├── src/                # Code source principal du frontend (fichiers HTML, CSS et JS)
+
 │   ├── app.js              # Fichier JavaScript pour gérer la logique frontend (interaction avec l'API backend)
+
 │   ├── index.html          # Page HTML contenant l'interface utilisateur (formulaire, liste des utilisateurs)
+
 │   └── styles.css          # Fichier CSS pour le style de l'interface utilisateur
+
 ├── Dockerfile              # Fichier Docker principal pour le projet (si nécessaire pour l'orchestration globale)
+
 ├── database/               # Répertoire contenant les fichiers pour configurer la base de données
+
 │   └── Dockerfile          # Fichier de configuration Docker pour conteneuriser la base de données (PostgreSQL)
+
 ├── docker-compose.yml      # Fichier de configuration pour Docker Compose, orchestration des services (backend, frontend, database)
+
 ├── FINAL_PROJECT.md        # Documentation détaillée du projet, expliquant la mise en œuvre, l'architecture, etc.
+
 └── README.md               # Documentation du projet (résumé, prérequis, installation, et fonctionnement)
 
 
