@@ -1,0 +1,14 @@
+# FastAPI pour créer et gérer l'API
+fastapi==0.95.2  
+
+# Uvicorn comme serveur ASGI pour exécuter FastAPI
+uvicorn[standard]==0.22.0  
+
+# Pydantic pour la validation des données utilisateur
+pydantic==1.10.2  
+
+# psycopg2 pour interagir avec PostgreSQL
+psycopg2-binary==2.9.6  
+
+# python-dotenv pour la gestion des variables d'environnement (fichier .env)
+python-dotenv==1.0.0  

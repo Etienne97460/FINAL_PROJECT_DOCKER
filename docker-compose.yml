@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8000:8000"  # Mappe le port 8000 du conteneur au port 8000 de l'hôte
+    volumes:
+      - ./backend:/app
+    environment:
+      - DATABASE_URL=postgresql://user:password@database:5432/mydb
+    depends_on:
+      - database
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:80"  # Mappe le port 80 du conteneur au port 3000 de l'hôte
+    volumes:
+      - ./frontend/src:/usr/share/nginx/html:ro
+    depends_on:
+      - backend
+
+  database:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mydb
+    ports:
+      - "5432:5432"  # Mappe le port 5432 du conteneur au port 5432 de l'hôte
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
